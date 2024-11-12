@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Chat_tacular\Settings.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Chat_tacular\bluepane.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Chat_tacular\Settings.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Chat_tacular\Settings.cs" />
+    <None Include="Chat_tacular\Settings.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="TwitchLib" Version="3.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Chat_tacular\bluepane.png" />
+  </ItemGroup>
+
+</Project>
