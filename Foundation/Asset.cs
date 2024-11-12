@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Foundation_GameTemplate
+namespace ChatTacular2
 {
     internal class Asset
     {

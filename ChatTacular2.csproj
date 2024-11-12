@@ -5,6 +5,7 @@
     <TargetFramework>net8.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+	<UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,7 +30,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FoundationR\FoundationR.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Chat_tacular\bluepane.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Textures\background.rew">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Textures\bluepane.rew">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Textures\cans.rew">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

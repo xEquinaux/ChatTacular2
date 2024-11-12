@@ -10,7 +10,7 @@ using System.Windows.Threading;
 
 namespace Chat_tacular;
 
-public class App : Application
+public class App
 {
 	//internal static Settings Settings;
 
@@ -122,18 +122,4 @@ public class App : Application
 		return text;
 	}
 
-	public App()
-	{
-		base.DispatcherUnhandledException += App_DispatcherUnhandledException;
-	}
-
-	private void App_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
-	{
-		//Logger.LogErrors(e?.Exception?.ToString(), MessageType.Error);
-		if (MessageBox.Show($"Internal error. Close program? y/n\n\n{e?.Exception?.Message}", "Error", MessageBoxButton.YesNo, MessageBoxImage.Hand) == MessageBoxResult.Yes)
-		{
-			Application.Current?.Shutdown();
-		}
-		e.Handled = true;
-	}
 }

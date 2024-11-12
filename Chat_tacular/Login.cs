@@ -186,7 +186,7 @@ public partial class Login : Window, IComponentConnector
 				}
 			}
 		}
-		Application.Current.Shutdown();
+		//Application.Current.Shutdown();
 	}
 
 	private HttpWebResponse GetUrl(IDictionary<string, string> values, string URL)
@@ -204,7 +204,7 @@ public partial class Login : Window, IComponentConnector
 		return Process.Start(GetUrl(new Dictionary<string, string>
 		{
 			{ "client_id", "l2hfsdik4txfm297h4yguxqhad9x21" },
-			{ "redirect_uri", "https://dev.circleprefect.com/auth.php" },
+			{ "redirect_uri", "http://localhost" },
 			{ "response_type", "token" },
 			{ "scope", "chat:edit chat:read" }
 		}, URL).ResponseUri.AbsoluteUri);
@@ -219,7 +219,7 @@ public partial class Login : Window, IComponentConnector
 	{
 		if (closing)
 		{
-			Application.Current.Shutdown();
+			//Application.Current.Shutdown();
 		}
 	}
 }
